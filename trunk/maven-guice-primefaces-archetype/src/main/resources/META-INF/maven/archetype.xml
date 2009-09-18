@@ -4,16 +4,19 @@
   <sources>
     <source>src/main/java/App.java</source>
     <source>src/main/java/application/ApplicationModule.java</source>
-    <source>src/main/java/jpa/Controller.java</source>
-    <source>src/main/java/jpa/ControllerBean.java</source>
+    <source>src/main/java/jpa/EntityController.java</source>
+    <source>src/main/java/jpa/EntityControllerBean.java</source>
     <source>src/main/java/par/PersistentEntity.java</source>
     <source>src/main/java/web/EntityHandler.java</source>
+    <source>src/main/java/web/PropertiesHandler.java</source>
   </sources>
   <testSources>
     <source>src/test/java/AppTest.java</source>
   </testSources>
   <resources>
   	<resource>src/main/resources/META-INF/persistence.xml</resource>
+  	<resource>src/main/resources/messages_en.properties</resource>
+  	<resource>src/main/resources/messages_it.properties</resource>
   	<resource>src/main/webapp/WEB-INF/faces-config.xml</resource>
   	<resource>src/main/webapp/WEB-INF/web.xml</resource>
   	<resource>src/main/webapp/css/style.css</resource>

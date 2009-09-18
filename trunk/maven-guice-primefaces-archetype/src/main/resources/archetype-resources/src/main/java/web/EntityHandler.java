@@ -1,7 +1,9 @@
 package ${groupId}.${artifactId}.web;
 
-import ${groupId}.${artifactId}.jpa.Controller;
+import ${groupId}.${artifactId}.jpa.EntityController;
 import ${groupId}.${artifactId}.par.PersistentEntity;
+
+import ${groupId}.${artifactId}.web.PropertiesHandler;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,12 +17,15 @@ import com.google.inject.Inject;
 public class EntityHandler implements Serializable {
 
 	@Inject
-	private Controller controller;
+	private EntityController controller;
+	
+	@Inject
+	PropertiesHandler propertiesHandler;
 
 	private PersistentEntity singleEntity;
 
 	
-	public EntityHandler(Controller controller) {
+	public EntityHandler(EntityController controller) {
 		this.controller = controller;
 	}
 
@@ -36,8 +41,8 @@ public class EntityHandler implements Serializable {
 		return propertiesHandler.getTest();
 	}
 
-	public List<Entity> getAllEntities() {
-		List<Entity> lista = controller.getAllEntities();
+	public List<PersistentEntity> getAllEntities() {
+		List<PersistentEntity> lista = controller.getAllEntities();
 		// DataModel data = new ArrayDataModel();
 		// data.setWrappedData(lista);
 		return lista;
