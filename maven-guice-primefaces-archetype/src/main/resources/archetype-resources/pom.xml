@@ -149,6 +149,31 @@
 		</dependency>
 		
 	</dependencies>
+	
+	<!-- Reporting -->
+	<reporting>
+	  <plugins>
+	  	
+	  	<!-- JavaDocs -->
+	    <plugin>
+	      <groupId>org.apache.maven.plugins</groupId>
+	      <artifactId>maven-javadoc-plugin</artifactId>
+	    </plugin>
+	    
+	    <!-- Unit Test Reports -->
+	    <plugin>
+        	<artifactId>maven-surefire-report-plugin</artifactId>
+      	</plugin>
+      	
+      	<!-- Test Coverage -->
+      	<plugin>
+	        <artifactId>maven-clover-plugin</artifactId>
+	    </plugin>
+      	
+	    
+	  </plugins>
+	</reporting>
+	
   
   
 </project>
