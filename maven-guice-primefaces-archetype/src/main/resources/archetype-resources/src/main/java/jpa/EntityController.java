@@ -4,7 +4,7 @@ import java.util.List;
 
 import ${groupId}.${artifactId}.par.PersistentEntity;
 
-public interface Controller {
+public interface EntityController {
 
 	public void persist(PersistentEntity entity);
 	public void delete(PersistentEntity entity);

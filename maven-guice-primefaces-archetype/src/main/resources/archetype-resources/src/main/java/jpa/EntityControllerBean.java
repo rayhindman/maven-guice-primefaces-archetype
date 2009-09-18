@@ -14,12 +14,12 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.wideplay.warp.persist.Transactional;
 
-public class ControllerBean implements Controller {
+public class EntityControllerBean implements EntityController {
 
 	@Inject
 	Provider<EntityManager> em;
 
-	private Logger log = LoggerFactory.getLogger(ControllerBean.class);
+	private Logger log = LoggerFactory.getLogger(EntityControllerBean.class);
 
 	@Transactional
 	public void delete(PersistentEntity lastEntity) {
