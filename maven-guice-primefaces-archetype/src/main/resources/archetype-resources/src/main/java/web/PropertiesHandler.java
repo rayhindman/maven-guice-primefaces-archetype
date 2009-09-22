@@ -1,4 +1,4 @@
-package it.swimm.webapp.web;
+package ${groupId}.${artifactId}.web;
 
 import java.io.Serializable;
 
