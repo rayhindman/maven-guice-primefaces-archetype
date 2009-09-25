@@ -9,13 +9,13 @@
 <f:view contentType="text/html">
 	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>WebApp</title>
+	<title>${artifactId}</title>
 	<link href="#{request.contextPath}/css/style.css" rel="stylesheet" type="text/css" />
 	<p:resources />
 	</head>
 
-	<body>
-		<h1>Fuck You, World!</h1>
-	</body>
+	<ui:insert name="content">
+	</ui:insert>
+	
 </f:view>
 </html>

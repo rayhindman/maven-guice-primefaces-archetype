@@ -22,5 +22,7 @@
   	<resource>src/main/webapp/css/style.css</resource>
   	<resource>src/main/webapp/template/main.xhtml</resource>
   	<resource>src/main/webapp/images/image.png</resource>
+  	<resource>src/main/webapp/home.xhtml</resource>
+  	<resource>src/main/webapp/index.html</resource>
   </resources>
 </archetype>

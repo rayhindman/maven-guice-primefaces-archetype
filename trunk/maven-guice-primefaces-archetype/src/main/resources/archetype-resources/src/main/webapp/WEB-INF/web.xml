@@ -20,19 +20,19 @@
 	<context-param>
 		<param-name>optimus.CONFIG_MODULES</param-name>
 		<param-value>
-			it.flower.zetaweb.application.ApplicationModule
+			${groupId}.${artifactId}.application.ApplicationModule
 		</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>optimus.PERSISTENCE_UNIT</param-name>
-		<param-value>newsJPA</param-value>
+		<param-value>${artifactId}</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>optimus.CONTEXT_SCAN_PATH</param-name>
 		<param-value>
-			it.flower.zetaweb
+			${groupId}.${artifactId}
 		</param-value>
 	</context-param>
 
@@ -145,6 +145,6 @@
 		<url-pattern>/primefaces_resources/*</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.xhtml</welcome-file>
 	</welcome-file-list>
 </web-app>
