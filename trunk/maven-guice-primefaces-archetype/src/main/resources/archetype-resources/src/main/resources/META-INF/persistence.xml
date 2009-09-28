@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 	version="1.0">
 
-	<persistence-unit name="INSERT_PU_NAME_HERE" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="${artifactId}" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class></class>
 		<class></class>
@@ -12,10 +12,10 @@
 			<property name="hibernate.show_sql" value="false" />
 			<property name="hibernate.format_sql" value="false" />
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.connection.username" value="INSERT_USERNAME_HERE" />
-			<property name="hibernate.connection.password" value="INSERT_PASSWORD_HERE" />
+			<property name="hibernate.connection.username" value="${artifactId}" />
+			<property name="hibernate.connection.password" value="${artifactId}" />
 			<property name="hibernate.connection.url"
-				value="jdbc:mysql://localhost:3306/INSERT_SCHEMA_HERE?autoReconnect=true" />
+				value="jdbc:mysql://localhost:3306/${artifactId}?autoReconnect=true" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 		</properties>
