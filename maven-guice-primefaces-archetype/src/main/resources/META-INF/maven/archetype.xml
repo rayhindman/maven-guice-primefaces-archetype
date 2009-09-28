@@ -19,6 +19,7 @@
   	<resource>src/main/resources/messages_it.properties</resource>
   	<resource>src/main/webapp/WEB-INF/faces-config.xml</resource>
   	<resource>src/main/webapp/WEB-INF/web.xml</resource>
+  	<resource>src/main/webapp/WEB-INF/pretty-config.xml</resource>
   	<resource>src/main/webapp/css/style.css</resource>
   	<resource>src/main/webapp/template/main.xhtml</resource>
   	<resource>src/main/webapp/images/image.png</resource>
