@@ -2,6 +2,10 @@
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
+	
+	<display-name>${artifactId}</display-name>
+	<description>${artifactId}</description>
+	
 	<context-param>
 		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
 		<param-value>.xhtml</param-value>
@@ -14,7 +18,7 @@
 
 	<context-param>
 		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
-		<param-value>client</param-value>
+		<param-value>server</param-value>
 	</context-param>
 
 	<context-param>
@@ -31,71 +35,8 @@
 
 	<context-param>
 		<param-name>optimus.CONTEXT_SCAN_PATH</param-name>
-		<param-value>
-			${groupId}.${artifactId}
-		</param-value>
+		<param-value>${groupId}.${artifactId}</param-value>
 	</context-param>
-
-	<context-param>
-		<param-name>org.ajax4jsf.SKIN</param-name>
-		<param-value>blueSky</param-value>
-	</context-param>
-
-	<context-param>
-		<param-name>org.ajax4jsf.VIEW_HANDLERS</param-name>
-		<param-value>com.sun.facelets.FaceletViewHandler</param-value>
-	</context-param>
-
-	<context-param>
-		<param-name>org.ajax4jsf.COMPRESS_SCRIPT</param-name>
-		<param-value>true</param-value>
-	</context-param>
-
-	<context-param>
-		<param-name>org.ajax4jsf.COMPRESS_STYLE</param-name>
-		<param-value>true</param-value>
-	</context-param>
-
-	<context-param>
-		<param-name>org.ajax4jsf.xmlparser.ORDER</param-name>
-		<param-value>NEKO, TIDY</param-value>
-	</context-param>
-
-	<context-param>
-		<param-name>org.richfaces.CONTROL_SKINNING</param-name>
-		<param-value>enable</param-value>
-	</context-param>
-
-	<context-param>
-		<param-name>org.richfaces.LoadStyleStrategy</param-name>
-		<param-value>DEFAULT</param-value>
-	</context-param>
-
-	<context-param>
-		<param-name>org.richfaces.LoadScriptStrategy</param-name>
-		<param-value>DEFAULT</param-value>
-	</context-param>
-
-	<filter>
-		<display-name>Ajax4jsf Filter</display-name>
-		<filter-name>ajax4jsf</filter-name>
-		<filter-class>org.ajax4jsf.Filter</filter-class>
-
-		<init-param>
-			<param-name>createTempFiles</param-name>
-			<param-value>false</param-value>
-		</init-param>
-
-		<init-param>
-			<param-name>maxRequestSize</param-name>
-			<param-value>100000</param-value>
-		</init-param>
-	</filter>
-
-	<filter-mapping>
-		<filter-name>ajax4jsf</filter-name>
-		<url-pattern>*.jsf</url-pattern>
-	</filter-mapping>
 
 	<filter>
 		<filter-name>sessionPerRequestFilter</filter-name>
@@ -103,6 +44,15 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>sessionPerRequestFilter</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>PrimeFaces FileUpload Filter</filter-name>
+		<filter-class>org.primefaces.ui.webapp.filter.FileUploadFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>PrimeFaces FileUpload Filter</filter-name>
 		<servlet-name>Faces Servlet</servlet-name>
 	</filter-mapping>
 
@@ -124,17 +74,6 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
-	<filter>
-		<filter-name>Pretty Filter</filter-name>
-		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>Pretty Filter</filter-name>
-		<url-pattern>/*</url-pattern>
-		<dispatcher>REQUEST</dispatcher>
-		<dispatcher>FORWARD</dispatcher>
-		<dispatcher>ERROR</dispatcher>
-	</filter-mapping>
 	<servlet>
 		<servlet-name>Resource Servlet</servlet-name>
 		<servlet-class>org.primefaces.ui.resource.ResourceServlet</servlet-class>
@@ -147,4 +86,5 @@
 	<welcome-file-list>
 		<welcome-file>index.xhtml</welcome-file>
 	</welcome-file-list>
+	
 </web-app>
