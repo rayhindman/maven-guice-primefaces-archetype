@@ -22,7 +22,7 @@
   	<resource>src/main/webapp/WEB-INF/pretty-config.xml</resource>
   	<resource>src/main/webapp/css/style.css</resource>
   	<resource>src/main/webapp/template/main.xhtml</resource>
-  	<resource>src/main/webapp/images/image.jpg</resource>
+  	<resource filtered="false">src/main/webapp/images/image.jpg</resource>
   	<resource>src/main/webapp/home.xhtml</resource>
   	<resource>src/main/webapp/index.xhtml</resource>
   </resources>
