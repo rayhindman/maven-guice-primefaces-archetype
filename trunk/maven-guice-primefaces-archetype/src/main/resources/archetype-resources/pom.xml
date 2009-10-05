@@ -201,6 +201,13 @@
 			<type>pom</type>
 			<scope>compile</scope>
 		</dependency>
+		
+		<dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-ui</artifactId>
+            <version>3.3.2.GA</version>
+            <scope>compile</scope>
+        </dependency>
 
 	</dependencies>
 	
